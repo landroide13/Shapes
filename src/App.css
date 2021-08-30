@@ -1,9 +1,16 @@
 
 
 
-#app{
+.App{
   max-height: 100%;
+  margin: 1rem;
   padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+
+  
 }
 
 

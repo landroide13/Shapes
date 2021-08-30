@@ -4,23 +4,30 @@ import './ShapeControl.css';
 
 class ShapeController extends Component {
   state = {
-    shape: "",
-    size: "",
-    background: "",
+    shape: 50,
+    size: 100,
+    background: "#97bf9a",
   };
 
-  // shouldComponentUpdate(nextProps, nextState) {
-  //   return true;
-  // }
+  componentDidMount() {
+    setInterval(this.setShape, 2000);
+    setInterval(this.setSize, 2000);
+  }
 
   getNumber = (min, max) => {
     const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
     return randomNum;
   };
 
-  returnNum = (num) => {
-    return num;
-  };
+  setShape = () => {
+    const shape = this.getNumber(1, 50);
+    this.setState({ shape });
+  }
+
+  setSize = () => {
+    const size = this.getNumber(0.1, 10);
+    this.setState({ size });
+  }
 
   shuffle = (arr) => {
     const inx = this.getNumber(0, arr.length);
@@ -28,11 +35,12 @@ class ShapeController extends Component {
   };
 
   render() {
-    const sizes = [0.1, 0.5, 1, 1.8, 2, 4, 6, 8, 10];
 
-    // setInterval(this.shuffle, 5000)
+    const { shape, size } = this.state
 
-    const shape = [5, 15, 50];
+    // const sizes = [0.1, 0.5, 1, 1.8, 2, 4, 6, 8, 10];
+
+    // const shape = [5, 15, 50];
 
     const colors = [
       "#77b3d1",
@@ -59,221 +67,7 @@ class ShapeController extends Component {
 
     return (
       <div id="grid">
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
-
-        <CircleShape
-          shape={this.shuffle(shape)}
-          size={this.shuffle(sizes)}
-          back={this.shuffle(colors)}
-        />
+        <CircleShape shape={shape} size={size} back={this.shuffle(colors)} />
       </div>
     );
   }

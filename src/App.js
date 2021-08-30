@@ -5,9 +5,101 @@ import './App.css';
 function App() {
   return (
     <div className="App">
+      <ShapeController />
 
       <ShapeController />
-      
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
+
+      <ShapeController />
     </div>
   );
 }
